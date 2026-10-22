@@ -11,7 +11,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 bat '''
-                    "C:\\Users\\Vignesh\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m venv .venv
+                    "C:\\Users\\Pranav\\AppData\\Local\\Programs\\Python\\Python314\\python.exe" -m venv .venv
                     .venv\\Scripts\\python.exe -m pip install -r requirements.txt
                 '''
             }
@@ -46,6 +46,7 @@ pipeline {
         success {
             echo 'SUCCESS: All stages completed.'
         }
+
         failure {
             echo 'FAILED: Check Console Output.'
         }
